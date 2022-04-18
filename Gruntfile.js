@@ -457,14 +457,10 @@ module.exports = function(grunt) {
                 cmd: "pack",
                 cwd: "<%= paths.dist %>/modules"
             },
-            'node-red': { options: { args: [__dirname+'/packages/node_modules/node-red'] } },
-            '@node-red/editor-api': { options: { args: [__dirname+'/packages/node_modules/@node-red/editor-api'] } },
-            '@node-red/editor-client': { options: { args: [__dirname+'/packages/node_modules/@node-red/editor-client'] } },
-            '@node-red/nodes': { options: { args: [__dirname+'/packages/node_modules/@node-red/nodes'] } },
-            '@node-red/registry': { options: { args: [__dirname+'/packages/node_modules/@node-red/registry'] } },
-            '@node-red/runtime': { options: { args: [__dirname+'/packages/node_modules/@node-red/runtime'] } },
-            '@node-red/util': { options: { args: [__dirname+'/packages/node_modules/@node-red/util'] } }
-
+            '@uhuru/node-red': { options: { args: [__dirname+'/packages/node_modules/node-red'] } },
+            '@uhuru/node-red-editor-api': { options: { args: [__dirname+'/packages/node_modules/@node-red/editor-api'] } },
+            '@uhuru/node-red-editor-client': { options: { args: [__dirname+'/packages/node_modules/@node-red/editor-client'] } },
+            '@uhuru/node-red-runtime': { options: { args: [__dirname+'/packages/node_modules/@node-red/runtime'] } },
 
         },
         mkdir: {

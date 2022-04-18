@@ -1,6 +1,6 @@
 {
-    "name": "node-red",
-    "version": "2.2.2",
+    "name": "@uhuru/node-red",
+    "version": "2.2.2-beta.19",
     "description": "Low-code programming for event-driven applications",
     "homepage": "http://nodered.org",
     "license": "Apache-2.0",
@@ -40,6 +40,7 @@
         "cookie-parser": "1.4.6",
         "cors": "2.8.5",
         "cronosjs": "1.7.1",
+        "d3": "^7.4.2",
         "denque": "2.0.1",
         "express": "4.17.2",
         "express-session": "1.17.2",
