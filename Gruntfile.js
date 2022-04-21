@@ -460,7 +460,8 @@ module.exports = function(grunt) {
             '@uhuru/node-red': { options: { args: [__dirname+'/packages/node_modules/node-red'] } },
             '@uhuru/node-red-editor-api': { options: { args: [__dirname+'/packages/node_modules/@node-red/editor-api'] } },
             '@uhuru/node-red-editor-client': { options: { args: [__dirname+'/packages/node_modules/@node-red/editor-client'] } },
-            '@uhuru/node-red-runtime': { options: { args: [__dirname+'/packages/node_modules/@node-red/runtime'] } },
+            '@uhuru/node-red-registry': { options: { args: [__dirname+'/packages/node_modules/@node-red/registry'] } },
+            '@uhuru/node-red-runtime': { options: { args: [__dirname+'/packages/node_modules/@node-red/runtime'] } }
 
         },
         mkdir: {

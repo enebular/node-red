@@ -9,6 +9,7 @@ const LATEST = "2";
 function generateScript() {
     return new Promise((resolve, reject) => {
         const packages = [
+            "@uhuru/node-red-registry",
             "@uhuru/node-red-runtime",
             "@uhuru/node-red-editor-client",
             "@uhuru/node-red-editor-api",

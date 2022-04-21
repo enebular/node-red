@@ -9,7 +9,8 @@ const packages = [
     "node-red",
     "@node-red/editor-api",
     "@node-red/editor-client",
-    "@node-red/runtime",
+    "@node-red/registry",
+    "@node-red/runtime"
 ];
 function updatePackage(packageFile, version) {
     let modulePackage = require(packageFile);
