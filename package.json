@@ -1,6 +1,6 @@
 {
     "name": "@uhuru/node-red",
-    "version": "2.2.2-beta.21",
+    "version": "2.2.2-beta.23",
     "description": "Low-code programming for event-driven applications",
     "homepage": "http://nodered.org",
     "license": "Apache-2.0",
@@ -66,6 +66,10 @@
         "multer": "1.4.4",
         "mustache": "4.2.0",
         "node-red-admin": "^2.2.3",
+        "node-red-dashboard": "^3.1.7",
+        "node-red-node-email": "^1.15.1",
+        "node-red-node-pi-gpio": "^2.0.3",
+        "node-red-node-tail": "^0.3.2",
         "nopt": "5.0.0",
         "oauth2orize": "1.11.1",
         "on-headers": "1.0.2",
