@@ -1,18 +1,11 @@
-# How to publish to npmjs
+# How to make lambda version of node-red
 
-1. Remove monaco build files in Gruntfile.js
-
-```
-'monaco/dist/**',
-'monaco/types/extraLibs.js',
-'monaco/style.css',
-'monaco/monaco-bootstrap.js'
-``
-
-2. Remove additional nodes
-
-```  
-"node-red-dashboard": "^3.1.7",
-"node-red-node-email": "^1.15.1",
-"node-red-node-tail": "^0.3.2"
-```
+1. Use command to make lite version of node-red
+`node scripts/make-lite-build`
+1. Change version of package.json
+`node scripts/set-package-version.js XXX-lite`
+1. Prepare packages to release
+`npx grunt release`
+1. Publish
+`cd .dist/modules`
+`sh publish.sh`

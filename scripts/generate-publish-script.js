@@ -23,8 +23,9 @@ function generateScript() {
         let tagArg = "";
         if (versionParts[0] !== LATEST) {
             tagArg = `--tag v${versionParts[0]}-maintenance`
-        } else if (/-/.test(version))  {
-            tagArg = "--tag beta"
+        } else if (/-/.test(version)) {
+            let tag = /.+-([a-z]+)\.?.*/.exec(version)[1] || 'beta'
+            tagArg = `--tag ${tag}`
         } else {
             updateNextToLatest = true;
         }
