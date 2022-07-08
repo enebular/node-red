@@ -1,6 +1,6 @@
 {
     "name": "@uhuru/node-red",
-    "version": "2.2.2-beta.25",
+    "version": "2.2.2-n.1",
     "description": "Low-code programming for event-driven applications",
     "homepage": "http://nodered.org",
     "license": "Apache-2.0",

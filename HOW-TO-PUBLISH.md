@@ -17,8 +17,8 @@
 以下のコマンドを実行します。
 `npm i`
 1. Versionの変更
-Versionを変更します。本パッケージのVersionの規則は`XXX`とし、nの部分を加算していきます。
-`node scripts/set-package-version.js XXX`
+Versionを変更します。本パッケージのVersionの規則は`X.X.X-n.x`とし、nの部分を加算していきます。
+`node scripts/set-package-version.js X.X.X-n.x`
 1. release用のパッケージファイル作成
 以下のコマンドを実行します。
 `npx grunt release`

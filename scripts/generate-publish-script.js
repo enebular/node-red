@@ -6,6 +6,8 @@ const should = require("should");
 
 const LATEST = "2";
 
+const LATEST_TAG = 'n'
+
 function generateScript() {
     return new Promise((resolve, reject) => {
         const packages = [
@@ -25,7 +27,9 @@ function generateScript() {
             tagArg = `--tag v${versionParts[0]}-maintenance`
         } else if (/-/.test(version)) {
             let tag = /.+-([a-z]+)\.?.*/.exec(version)[1] || 'beta'
-            tagArg = `--tag ${tag}`
+            if (tag !== LATEST_TAG) {
+                tagArg = `--tag ${tag}`
+            }
         } else {
             updateNextToLatest = true;
         }
