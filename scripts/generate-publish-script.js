@@ -6,16 +6,16 @@ const should = require("should");
 
 const LATEST = "3";
 
+const LATEST_TAG = 'n'
+
 function generateScript() {
     return new Promise((resolve, reject) => {
         const packages = [
-            "@node-red/util",
-            "@node-red/runtime",
-            "@node-red/registry",
-            "@node-red/nodes",
-            "@node-red/editor-client",
-            "@node-red/editor-api",
-            "node-red"
+            "@uhuru/node-red-registry",
+            "@uhuru/node-red-runtime",
+            "@uhuru/node-red-editor-client",
+            "@uhuru/node-red-editor-api",
+            "@uhuru/node-red",
         ];
         const rootPackage = require(path.join(__dirname,"..","package.json"));
         const version = rootPackage.version;
@@ -25,8 +25,11 @@ function generateScript() {
         let tagArg = "";
         if (versionParts[0] !== LATEST) {
             tagArg = `--tag v${versionParts[0]}-maintenance`
-        } else if (/-/.test(version))  {
-            tagArg = "--tag next"
+        } else if (/-/.test(version)) {
+            let tag = /.+-([a-z]+)\.?.*/.exec(version)[1] || 'beta'
+            if (tag !== LATEST_TAG) {
+                tagArg = `--tag ${tag}`
+            }
         } else {
             updateNextToLatest = true;
         }

@@ -9,17 +9,15 @@ const packages = [
     "node-red",
     "@node-red/editor-api",
     "@node-red/editor-client",
-    "@node-red/nodes",
     "@node-red/registry",
-    "@node-red/runtime",
-    "@node-red/util"
+    "@node-red/runtime"
 ];
 function updatePackage(packageFile, version) {
     let modulePackage = require(packageFile);
     modulePackage.version = version;
     let dependencies = Object.keys(modulePackage.dependencies||{});
     dependencies.forEach(module => {
-        if (/^@node-red\//.test(module)) {
+        if (/^@uhuru\//.test(module)) {
             modulePackage.dependencies[module] = version;
         }
     });

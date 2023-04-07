@@ -26,7 +26,7 @@ function verifyDependencies() {
         let dependencies = Object.keys(modulePackage.dependencies||{});
         dependencies.forEach(module => {
             try {
-                if (!/^@node-red\//.test(module)) {
+                if (!/^@node-red|@uhuru\//.test(module)) {
                     should.exist(rootDependencies[module],`[${package}] '${module}' missing from root package.json`);
                     try {
                         rootDependencies[module].should.eql(modulePackage.dependencies[module],`[${package}] '${module}' version mismatch. Expected '${modulePackage.dependencies[module]}' (got '${rootDependencies[module]}') `);
